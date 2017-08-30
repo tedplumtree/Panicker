@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mapDispatchToProps passes correct props to connected component 1`] = `
+Object {
+  "onPress": [Function],
+}
+`;
+
+exports[`mapDispatchToProps passes prop onPress that dispatches correct action 1`] = `
+Array [
+  Object {
+    "type": "TOGGLE_SENSOR",
+  },
+]
+`;
+
+exports[`mapStateToProps when sensor is active passes the correct props 1`] = `
+Object {
+  "icon": "dummy-deactivate-icon",
+}
+`;
+
+exports[`mapStateToProps when sensor is inactive passes the correct props 1`] = `
+Object {
+  "icon": "dummy-activate-icon",
+}
+`;

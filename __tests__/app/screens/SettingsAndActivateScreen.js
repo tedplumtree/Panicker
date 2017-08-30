@@ -5,6 +5,17 @@ import { ThemeProvider } from 'react-native-material-ui';
 import renderer from 'react-test-renderer';
 import SettingsAndActivateScreen from '../../../app/screens/SettingsAndActivateScreen';
 
+jest.mock(
+  // Force SensorActionButton (connected component) to render so we can test it
+  '../../../app/containers/SensorActionButton',
+  () => 'MockSensorActionButton',
+);
+
+jest.mock(
+  '../../../app/layouts/ToolbarCollapsingScrollLayout',
+  () => 'MockToolbarCollapsingScrollLayout',
+);
+
 const dummyMaterialDesignTheme = {
   palette: {
     primaryColor: '#009688',
@@ -15,11 +26,6 @@ const dummyMaterialDesignTheme = {
     },
   },
 };
-
-jest.mock(
-  '../../../app/layouts/ToolbarCollapsingScrollLayout',
-  () => 'ToolbarCollapsingScrollLayout',
-);
 
 it('renders correctly', () => {
   const tree = renderer.create(

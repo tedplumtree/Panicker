@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sensor when passed a nonexistent action when sensor is active doesn't do anything 1`] = `
+Object {
+  "sensor": Object {
+    "active": true,
+  },
+}
+`;
+
+exports[`sensor when passed a nonexistent action when sensor is in initial state doesn't do anything 1`] = `
+Object {
+  "sensor": Object {
+    "active": false,
+  },
+}
+`;
+
+exports[`sensor when passed a nonexistent action when sensor is inactive doesn't do anything 1`] = `
+Object {
+  "sensor": Object {
+    "active": false,
+  },
+}
+`;
+
+exports[`sensor when toggled when sensor is active correctly reduces the action 1`] = `
+Object {
+  "sensor": Object {
+    "active": false,
+  },
+}
+`;
+
+exports[`sensor when toggled when sensor is inactive correctly reduces the action 1`] = `
+Object {
+  "sensor": Object {
+    "active": true,
+  },
+}
+`;

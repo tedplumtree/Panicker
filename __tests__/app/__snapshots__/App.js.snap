@@ -1,3 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `<SettingsAndActivateScreen />`;
+exports[`sets up the app and renders correctly 1`] = `
+<MockStoreProvider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(Symbol.observable): [Function],
+    }
+  }
+>
+  <MockThemeProvider
+    uiTheme={
+      Object {
+        "palette": Object {
+          "primaryColor": "dummy color",
+        },
+      }
+    }
+  >
+    <MockSettingsAndActivateScreen />
+  </MockThemeProvider>
+</MockStoreProvider>
+`;
